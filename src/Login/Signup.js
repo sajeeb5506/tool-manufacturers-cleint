@@ -47,7 +47,7 @@ const Signup = () => {
         <div className=' flex justify-center items-center h-screen my-8'>
             <div class="card w-96 bg-base-100 shadow-xl">
           <div class="card-body">
-          <h2 class=" text-center text-2xl font-bold">Sign Up</h2>
+          <h2 class=" text-center text-2xl font-bold text-primary">Sign Up</h2>
           
           <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -140,14 +140,14 @@ const Signup = () => {
          
          {signInError}
         
-      <input  class="btn w-full max-w-xs text-white"  type="submit" value='Sign Up ' />
+      <input  class="btn w-full max-w-xs text-white bg-primary border-0"  type="submit" value='Sign Up ' />
       
       </form>
 
        <p> <small>Already Have An Account?  <Link className='text-primary' to='/login'> Please Login</Link> </small> </p>
           
           <div class="divider">OR</div>
-          <button onClick={() => signInWithGoogle()} class="btn btn-outline">Continue with Google</button>
+          <button onClick={() => signInWithGoogle()} class="btn btn-outline bg-primary border-0">Continue with Google</button>
         
            </div>
           </div>

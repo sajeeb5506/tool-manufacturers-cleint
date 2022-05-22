@@ -12,14 +12,15 @@ const Navber = () => {
     };
     const menuItem = <>
 
-        <li> <Link to="/">Home</Link></li>
-        <li> <Link to="/blog">Blog</Link></li>
+        <li className='text-primary font-bold '> <Link to="/">Home</Link></li>
+        <li className='text-primary font-bold'> <Link to="/blog">Blog</Link></li>
     
 
     </>
     const authentication= <>
 
-       <li>{user? <button  onClick={logout} class="btn btn-ghost">Sign Out</button>:<Link to="/login">Login</Link>}</li>
+       <li>{user? <button  onClick={logout} class="btn btn-ghost text-primary font-bold">Sign Out</button>:
+       <Link className='text-primary font-bold' to="/login">Login</Link>}</li>
 
     </> 
 

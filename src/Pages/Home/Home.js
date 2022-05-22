@@ -3,7 +3,8 @@ import AllTools from './AllTools';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import Contact from './Contact';
-import Gallery from './Gallery';
+import Gallery from './About';
+import Reviews from './Reviews';
 
 const Home = () => {
     return (
@@ -11,8 +12,10 @@ const Home = () => {
           <Banner></Banner>
           <AllTools/>
           <BusinessSummary/>
-          <Contact/>
           <Gallery/>
+          <Reviews/>
+          <Contact/>
+          
            
         </div>
     );
