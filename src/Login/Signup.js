@@ -44,7 +44,7 @@ const Signup = () => {
        navigate('/');
     };
     return (
-        <div className=' flex justify-center items-center h-screen'>
+        <div className=' flex justify-center items-center h-screen my-8'>
             <div class="card w-96 bg-base-100 shadow-xl">
           <div class="card-body">
           <h2 class=" text-center text-2xl font-bold">Sign Up</h2>

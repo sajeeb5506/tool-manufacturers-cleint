@@ -3,7 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
-
+import logo from '../../../src/assets/img/Risorsa-36.png'
 
 const Navber = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -35,7 +35,7 @@ const Navber = () => {
       {menuItem}
       </ul>
     </div>
-    <Link to="/" class="btn btn-ghost normal-case text-xl">daisyUI</Link>
+    <Link to="/" ><img className='h-8' src={logo} alt="" /></Link>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal p-0">
