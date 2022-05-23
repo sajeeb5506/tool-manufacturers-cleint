@@ -1,0 +1,51 @@
+[
+  {
+    "name": "ITA 20",
+    "image": "https://www.itatools.net/wp/wp-content/uploads/2020/03/ITA-20-copia-768x512.png",
+    "description": "Battery strapping tool for 13mm and 16mm PP and PET strap Manual Operating Mode.",
+    "minimum": "10",
+    "quantity": "50000",
+    "price": "150"
+  },
+  {
+    "name": "ITA 10",
+    "image": "https://www.itatools.net/wp/wp-content/uploads/2020/03/ITA_10-768x472.png",
+    "description": "Pneumatic strapping tool for Polypropylene and Polyester strap from 10mm to 19mm.",
+    "minimum": "8",
+    "quantity": "45000",
+    "price": "200"
+  },
+  {
+    "name": "ITA 30",
+    "image": "https://www.itatools.net/wp/wp-content/uploads/2020/06/ITA-30-768x492.png",
+    "description": "Manual sealless strapping tool for steel strap.",
+    "minimum": "5",
+    "quantity": "40000",
+    "price": "190"
+  },
+  {
+    "name": "ITA 42",
+    "image": "https://www.itatools.net/wp/wp-content/uploads/2020/06/ITA_42-768x484.png",
+    "description": "Pneumatic steel strapping tool with seal joint.",
+    "minimum": "4",
+    "quantity": "30000",
+    "price": "250"
+  },
+  {
+    "name": "ITA 71",
+    "image": "https://www.itatools.net/wp/wp-content/uploads/2020/06/ITA-71-copia-768x445.png",
+    "description": "Hello, Mason Lindsey! You have 3 unread messages.",
+    "minimum": "10",
+    "quantity": "60000",
+    "price": "300"
+  },
+  {
+    "name": "ITA 22",
+    "image": "https://www.itatools.net/wp/wp-content/uploads/2020/05/1-ITA-22-768x512.jpg",
+    "description": "Battery strapping toolfor 13mm / 16mm – PP & PET strap Manual operating mode",
+    "minimum": "5",
+    "quantity": "35000",
+    "price": "280"
+  }
+
+]

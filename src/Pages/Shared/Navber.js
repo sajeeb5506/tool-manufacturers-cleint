@@ -14,6 +14,12 @@ const Navber = () => {
 
         <li className='text-primary font-bold '> <Link to="/">Home</Link></li>
         <li className='text-primary font-bold'> <Link to="/blog">Blog</Link></li>
+
+        {
+          user?<li className='text-primary font-bold'> <Link to="/dashboard">Dashboard</Link></li>:<></>
+
+        }
+        
     
 
     </>
@@ -46,6 +52,8 @@ const Navber = () => {
   <div class="navbar-end">
   <ul class="menu menu-horizontal p-0">
     {authentication}
+
+   
     </ul>
   </div>
 
