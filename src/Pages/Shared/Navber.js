@@ -14,6 +14,7 @@ const Navber = () => {
 
         <li className='text-primary font-bold '> <Link to="/">Home</Link></li>
         <li className='text-primary font-bold'> <Link to="/blog">Blog</Link></li>
+        <li className='text-primary font-bold'> <Link to="/portfolio"> My Portfolio</Link></li>
 
         {
           user?<li className='text-primary font-bold'> <Link to="/dashboard">Dashboard</Link></li>:<></>
