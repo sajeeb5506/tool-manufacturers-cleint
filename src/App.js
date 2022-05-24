@@ -15,6 +15,8 @@ import MyProtfolio from './Pages/Home/MyProtfolio';
 import Footer from './Pages/Shared/Footer';
 import Navber from './Pages/Shared/Navber';
 import Purchase from './Purchase/Purchase';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -44,6 +46,7 @@ function App() {
         <Route path="signup" element={<Signup />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ToastContainer />
       <Footer/>
     </div>
   );

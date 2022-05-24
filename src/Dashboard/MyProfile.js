@@ -1,13 +1,14 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import {  toast } from 'react-toastify';
 
 import auth from '../firebase.init';
 
 const MyProfile = () => {
 
     const [user] = useAuthState(auth);
-    const userEmail = user.email;
+    const userEmail = user?.email;
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data =>{
        
@@ -23,6 +24,12 @@ const MyProfile = () => {
                    .then(res=>res.json())
                    .then(result=> {
                        console.log(result);
+                      if(data.success){
+                        toast("Information Added Successfully ")
+                      }
+                      else{
+                        toast.error('Already Added')
+                      }
                    } )
                reset();
               }
@@ -41,7 +48,7 @@ const MyProfile = () => {
        
      <form onSubmit={handleSubmit(onSubmit)} className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-5 mb-5' >
    
-      <input  className='input input-bordered my-2'  defaultValue={userEmail} {...register("email")} />
+      <input  className='input input-bordered my-2' readOnly defaultValue={userEmail} {...register("email")} />
       <input className='input input-bordered my-2' placeholder='Name' {...register("name", { required: true })} />
       <input className='input input-bordered my-2' placeholder='Education' {...register("education", { required: true })} />
       <input className='input input-bordered my-2' placeholder='Location'  {...register("location", { required: true })} />
