@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import {  toast } from 'react-toastify';
 
 import auth from '../firebase.init';
+import UbdateInfo from './UbdateInfo';
 
 const MyProfile = () => {
-
     const [user] = useAuthState(auth);
+   
     const userEmail = user?.email;
+    const [userinfo, setUserinfo]=useState([]);
+   
+    useEffect(()=>{
+        const url=`http://localhost:5000/singleuser?userEmail=${userEmail}`;
+       
+        fetch(url)
+        
+        .then(res=>res.json())
+        .then(data=>setUserinfo(data))
+   
+    },[]);
+
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data =>{
        
-        console.log(data);
+       
         const url = `http://localhost:5000/users`;
         fetch(url, {
                       method:'POST',
@@ -22,8 +36,8 @@ const MyProfile = () => {
                       body: JSON.stringify(data )
                   })
                    .then(res=>res.json())
-                   .then(result=> {
-                       console.log(result);
+                   .then(data=> {
+                       console.log(data);
                       if(data.success){
                         toast("Information Added Successfully ")
                       }
@@ -37,10 +51,22 @@ const MyProfile = () => {
 
 
     return (
-        <div>
-            <h1>my prodile</h1>
-            <h1>{user.displayName}</h1>
-            <h1>{user.email}</h1>
+        <div className=''>
+            <h1 className='text-center text-3xl font-serif font-bold text-primary my-5'>My Profile</h1>
+         
+        
+            <div className="flex ">
+                {
+                    userinfo?.map(info=><UbdateInfo
+                    key={info?._id}
+                    info={info}
+                    ></UbdateInfo>)
+                }
+            </div>
+
+            
+
+         
    
             <div className="">
                 <h1 className='text-2xl font-bold text-primary text-center'>Add Information</h1>
@@ -62,9 +88,13 @@ const MyProfile = () => {
     </form>
 
      
-      
+      </div>
+
+            {/* <div className="">
+                <Link to='/update' className='text-info font-bold text-2xl underline'>Update Information</Link>
+
                  
-            </div>
+            </div> */}
         </div>
     );
 };

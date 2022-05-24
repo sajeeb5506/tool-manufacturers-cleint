@@ -3,11 +3,11 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
-        <div class="drawer drawer-mobile">
+        <div class="drawer drawer-mobile  ">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content  ">
       <div className="flex justify-between">
-      <h1 className='text-primary text-2xl font-bold  my-3'>Your Dashboard</h1>
+      <h1 className='text-primary text-2xl font-bold  my-3 text-center'>Your Dashboard</h1>
 
     <label tabindex="0" class="btn btn-ghost lg:hidden"  for="my-drawer-2">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -33,4 +33,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;<h1>dashboard</h1>
+export default Dashboard;

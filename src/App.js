@@ -17,6 +17,7 @@ import Navber from './Pages/Shared/Navber';
 import Purchase from './Purchase/Purchase';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UbdateInfo from './Dashboard/UbdateInfo';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         } />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
+        <Route path="update" element={<UbdateInfo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
