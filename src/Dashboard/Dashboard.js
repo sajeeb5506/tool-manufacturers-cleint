@@ -25,6 +25,7 @@ const Dashboard = () => {
             <li className='text-primary font-bold '><Link to='/dashboard'>Dashboard</Link></li>
             <li className='text-primary font-bold '><Link to='/dashboard/review'>Add Review</Link></li>
             <li className='text-primary font-bold '><Link to='/dashboard/profile'>My Profile</Link></li>
+            <li className='text-primary font-bold '><Link to='/dashboard/users'>All user</Link></li>
        
           </ul>
         

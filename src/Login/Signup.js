@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
+import useTooken from '../hooks/useTooken';
 import Loding from '../Pages/Shared/Loding';
 
 const Signup = () => {
@@ -18,6 +19,7 @@ const Signup = () => {
       ] = useCreateUserWithEmailAndPassword(auth);
 
       const [updateProfile, updating, UbdateError] = useUpdateProfile(auth);
+      const [token]= useTooken(user  || gUser);
 
       const navigate = useNavigate();
 
@@ -32,8 +34,8 @@ const Signup = () => {
         signInError=<small className='text-red-500'>{error?.message || gError?.message || UbdateError?.message }</small>
      }
 
-    if (user || gUser){
-        console.log(user  || gUser);
+    if (token){
+        navigate('/');
     }
    
     const onSubmit = async data =>{
@@ -41,7 +43,7 @@ const Signup = () => {
        await createUserWithEmailAndPassword(data.email, data.password);
        await updateProfile({ displayName:data.name });
        console.log('ubdate done');
-       navigate('/');
+      //  navigate('/');
     };
     return (
         <div className=' flex justify-center items-center h-screen my-8'>

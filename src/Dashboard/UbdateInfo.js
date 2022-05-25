@@ -31,7 +31,7 @@ const UbdateInfo = ({info}) => {
               
     }
     return (
-        <div className=' '  >
+        <div className=''  >
 
       <div className=''>
           <h1 className='text-secondary font-bold text-2xl'  > <span className='text-primary'>Name: </span>{info.name }</h1>   

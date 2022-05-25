@@ -18,6 +18,7 @@ import Purchase from './Purchase/Purchase';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UbdateInfo from './Dashboard/UbdateInfo';
+import Users from './Dashboard/Users';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route index element={<Myorder />} />
         <Route path="review" element={<AddReview />} />
         <Route path="profile" element={<MyProfile />} />
+        <Route path="users" element={<Users />} />
         
         </Route>
 
