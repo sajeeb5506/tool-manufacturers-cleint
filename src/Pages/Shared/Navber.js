@@ -1,15 +1,18 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import logo from '../../../src/assets/img/Risorsa-36.png'
 
 const Navber = () => {
+  const nevigate = useNavigate();
     const [user, loading, error] = useAuthState(auth);
     const logout = () => {
       signOut(auth);
       localStorage.removeItem('accessToken');
+      nevigate('/')
+      
     };
     const menuItem = <>
 
