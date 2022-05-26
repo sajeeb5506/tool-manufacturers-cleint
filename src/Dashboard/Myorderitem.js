@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Myorderitem = ({order,index}) => {
     const number = index +1;
@@ -12,7 +13,7 @@ const Myorderitem = ({order,index}) => {
                 <td> {order.productName}</td>
                 <td> {order.quantity}</td>
                 <td> {order.price}</td>
-                <td> <button  class="btn btn-xs">pay</button></td>
+                <td> <Link to={`/dashboard/payment/${order._id}`}  class="btn btn-xs">pay</Link></td>
             </tr>
         
     );

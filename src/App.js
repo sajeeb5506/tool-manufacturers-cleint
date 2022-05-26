@@ -21,6 +21,7 @@ import UbdateInfo from './Dashboard/UbdateInfo';
 import Users from './Dashboard/Users';
 import RequireAdmin from './Login/RequireAdmin';
 import AdminOrder from './Dashboard/AdminOrder';
+import Payment from './Dashboard/Payment';
 ;
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="dashboard" element={  <RequireAuth><Dashboard/></RequireAuth> }>  
         <Route index element={<Myorder />} />
         <Route path="review" element={<AddReview />} />
+        <Route path="payment/:paymentid" element={<Payment/>} />
         <Route path="profile" element={<MyProfile />} />
         <Route path="orders" element={< AdminOrder/>} />
         <Route path="users" element={<Users />} />
