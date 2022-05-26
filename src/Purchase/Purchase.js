@@ -8,7 +8,7 @@ const Purchase = () => {
     const {id} = useParams();
     const [product,setProduct]=useState([]);
     const [quantity, setQuantity] = useState(product?.minimum);
-    const [error, setError] = useState(false);
+    
     useEffect(()=>{
       const url=`http://localhost:5000/products/${id}`
       fetch(url)
@@ -24,7 +24,7 @@ const Purchase = () => {
  const handleQuantity = (event) => {
    setQuantity(event.target.value);
  };
-
+ const [error, setError] = useState(false);
  useEffect(() => {
    if (
      quantity > product?.quantity ||
@@ -48,6 +48,19 @@ const Purchase = () => {
          quantity : event.target.quantity.value,
        }
        console.log(data)
+       const url = `http://localhost:5000/booking`;
+       fetch(url, {
+           method:'POST',
+           headers: {
+               'content-type':'application/json'
+           },
+           body: JSON.stringify(data)
+       })
+        .then(res=>res.json())
+        .then(result=> {
+            console.log(result);
+          
+        } )
     }
    
 
@@ -97,8 +110,8 @@ const Purchase = () => {
               className='input input-bordered my-2'
               name="quantity"
             />
-           
-               {error ? <span className="text-red-600 w-5 text-left">You can't order less than minimum quantity <br /> Or more than available quantity</span> : <button className='btn btn-primary text-white' type='submit'>submit</button>}
+            <button className='btn btn-primary text-white' type='submit'>submit</button>
+               {error ? <span className="text-red-600 w-5 text-left">You can't order less than minimum quantity <br /> Or more than available quantity</span> :''}
         </form>
            
 

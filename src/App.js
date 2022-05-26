@@ -20,7 +20,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import UbdateInfo from './Dashboard/UbdateInfo';
 import Users from './Dashboard/Users';
 import RequireAdmin from './Login/RequireAdmin';
-import Myprofile2 from './Dashboard/Myprofile2';
+import AdminOrder from './Dashboard/AdminOrder';
+;
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
         <Route index element={<Myorder />} />
         <Route path="review" element={<AddReview />} />
         <Route path="profile" element={<MyProfile />} />
-        <Route path="profile2" element={<Myprofile2 />} />
+        <Route path="orders" element={< AdminOrder/>} />
         <Route path="users" element={<Users />} />
         
         </Route>
