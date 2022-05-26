@@ -1,12 +1,20 @@
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loding from '../Pages/Shared/Loding';
+import CheckoutForm from './CheckoutForm';
+
+
+
+const stripePromise = loadStripe('pk_test_51L3bUaCpq3abtuydGetWBOCR3ckRRAYsKQcZh7rm6iWBxOdG3k5EJrZVsalQMCXufPB0BhVZfPfMsnatUS3V87P200bjKEqPYQ');
+
 
 const Payment = () => {
     const {paymentid}=useParams();
 const url=`http://localhost:5000/booking/${paymentid}`
-console.log(url)
+
 
 const {data:prodect, isLoading,refetch} = useQuery(['booking', paymentid], ()=>fetch(url,{
  
@@ -19,7 +27,7 @@ const {data:prodect, isLoading,refetch} = useQuery(['booking', paymentid], ()=>f
 if(isLoading){
     return <Loding></Loding>
 }
-console.log(prodect);
+// console.log(prodect);
     return (
         <div>
        
@@ -36,7 +44,9 @@ console.log(prodect);
       <div class="card-body">
       
    
-        
+      <Elements stripe={stripePromise}>
+    <CheckoutForm prodect={prodect} />
+     </Elements>
       </div>
  
 </div>
