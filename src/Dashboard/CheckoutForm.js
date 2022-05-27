@@ -71,20 +71,20 @@ else{
   console.log(paymentIntent);
   setsuccess('Your payment is completed !')
   // store method on db
-//  const payment = {
-//    booking: _id,
-//    transaction:paymentIntent.id,
-//  }
-//   fetch(`http://localhost:5000/bookingorder/${_id}`,{
-//     method:'PATCH',
-//     headers: { "Content-Type": "application/json" },
-//      body:JSON.stringify(payment)
-//   }).then(res=>res.json())
-//   .then(data=>{
-//     setProcessing(false);
-//     console.log(data);
+ const payment = {
+   booking: _id,
+   transaction:paymentIntent.id,
+ }
+  fetch(`http://localhost:5000/bookingorder/${_id}`,{
+    method:'PATCH',
+    headers: { "Content-Type": "application/json" },
+     body:JSON.stringify(payment)
+  }).then(res=>res.json())
+  .then(data=>{
+    setProcessing(false);
+    console.log(data);
 
-//   })
+  })
 }
     }
     return (

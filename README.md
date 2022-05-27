@@ -1,70 +1,46 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Plastic strapping tools
 
-## Available Scripts
+Explore Website [Live site]()
 
-In the project directory, you can run:
+## About this Website
 
-### `npm start`
+**1.This website build on React js.**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**2.Full Responsive website.**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+**3.Firebase authentication and hosting used.**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**4.If user not register or login can not get service.**
 
-### `npm run build`
+**5.Reset password and verification used this website.**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**6.User order items and  payment also.**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**7.Admin panel**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**7.Admin can show all user and payment ditails**
 
-### `npm run eject`
+## Techonology used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1.React Router
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.React router Hook
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3.Firebase
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.React hook
 
-## Learn More
+5.MongoDb
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+6.Node js (Express.js)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+7.Payment system (stripe.com)
 
-### Code Splitting
+8.Tailwind css (Daisy ui)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+9.Server Deploy on Heroqu
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

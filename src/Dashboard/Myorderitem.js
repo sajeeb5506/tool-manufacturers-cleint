@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Myorderitem = ({order,index}) => {
     const number = index +1;
-    console.log(order)
+    console.log(order.paid)
     return (
        
             <tr>
@@ -12,8 +12,10 @@ const Myorderitem = ({order,index}) => {
                 <td> {order.email}</td>
                 <td> {order.productName}</td>
                 <td> {order.quantity}</td>
-                <td> {order.price}</td>
-                <td> <Link to={`/dashboard/payment/${order._id}`}  class="btn btn-xs">pay</Link></td>
+                <td> {order?.paid  ? <> {order.transaction}</>: <>{order.price}</> }</td>
+                <td> { order?.paid ?   "paid" :<Link to={`/dashboard/payment/${order._id}`}  class="btn btn-xs">pay</Link>
+                         
+                         }</td>
             </tr>
         
     );
