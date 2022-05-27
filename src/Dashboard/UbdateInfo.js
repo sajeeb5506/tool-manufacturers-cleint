@@ -15,7 +15,7 @@ const UbdateInfo = ({info}) => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data =>{
         console.log(data);
-           const url =`http://localhost:5000/users/${id}`;
+           const url =`https://salty-tor-68806.herokuapp.com/users/${id}`;
     fetch(url, {
         method: 'PUT',
         headers: {

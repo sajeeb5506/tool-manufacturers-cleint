@@ -10,7 +10,7 @@ const Purchase = () => {
     const [quantity, setQuantity] = useState(product?.minimum);
     
     useEffect(()=>{
-      const url=`http://localhost:5000/products/${id}`
+      const url=`https://salty-tor-68806.herokuapp.com/products/${id}`
       fetch(url)
       .then(res=>res.json())
       .then(data=>setProduct(data))
@@ -48,7 +48,7 @@ const Purchase = () => {
          quantity : event.target.quantity.value,
        }
        console.log(data)
-       const url = `http://localhost:5000/booking`;
+       const url = `https://salty-tor-68806.herokuapp.com/booking`;
        fetch(url, {
            method:'POST',
            headers: {

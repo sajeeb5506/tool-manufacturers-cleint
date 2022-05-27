@@ -6,7 +6,7 @@ const UserRow = ({user,refetch,index}) => {
     const number = index + 1
   
     const makeAdmin =()=>{
-        fetch(`http://localhost:5000/user/admin/${email}`,{
+        fetch(`https://salty-tor-68806.herokuapp.com/user/admin/${email}`,{
             method:'PUT',
             headers :{
                 'content-type':'application/json'

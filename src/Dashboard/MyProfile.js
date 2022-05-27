@@ -14,7 +14,7 @@ const MyProfile = () => {
     const [userinfo, setUserinfo]=useState([]);
    
     useEffect(()=>{
-        const url=`http://localhost:5000/singleuser?userEmail=${userEmail}`;
+        const url=`https://salty-tor-68806.herokuapp.com/singleuser?userEmail=${userEmail}`;
        
         fetch(url)
         
@@ -27,7 +27,7 @@ const MyProfile = () => {
     const onSubmit = data =>{
        
        
-        const url = `http://localhost:5000/users`;
+        const url = `https://salty-tor-68806.herokuapp.com/users`;
         fetch(url, {
                       method:'POST',
                       headers: {

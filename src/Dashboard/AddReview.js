@@ -34,7 +34,7 @@ const AddReview = () => {
       const onSubmit = (data) => {
           console.log(data)
           
-          const url =`http://localhost:5000/reviews`;
+          const url =`https://salty-tor-68806.herokuapp.com/reviews`;
           fetch(url, {
             method:'POST',
             headers: {

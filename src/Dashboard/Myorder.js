@@ -11,7 +11,7 @@ const Myorder = () => {
     const [myorder, setMyorder]=useState([]);
     
     useEffect(()=>{
-        const url=`http://localhost:5000/booking/?email=${email}`;
+        const url=`https://salty-tor-68806.herokuapp.com/booking/?email=${email}`;
        
         fetch(url)
         
@@ -34,6 +34,7 @@ const Myorder = () => {
               <th>Quantity</th>
               <th>Price</th>
               <th>Place Order</th>
+              <th>Cancel</th>
               </tr>
              </thead>
                 <tbody>

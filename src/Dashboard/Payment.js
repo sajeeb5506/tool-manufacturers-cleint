@@ -13,7 +13,7 @@ const stripePromise = loadStripe('pk_test_51L3bUaCpq3abtuydGetWBOCR3ckRRAYsKQcZh
 
 const Payment = () => {
     const {paymentid}=useParams();
-const url=`http://localhost:5000/booking/${paymentid}`
+const url=`https://salty-tor-68806.herokuapp.com/booking/${paymentid}`
 
 
 const {data:prodect, isLoading,refetch} = useQuery(['booking', paymentid], ()=>fetch(url,{

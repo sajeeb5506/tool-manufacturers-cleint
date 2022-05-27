@@ -14,7 +14,7 @@ const CheckoutForm = ({prodect}) => {
 
     useEffect(() => {
       // Create PaymentIntent as soon as the page loads
-      fetch("http://localhost:5000/create-payment-intent", {
+      fetch("https://salty-tor-68806.herokuapp.com/create-payment-intent", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ price}),
@@ -75,7 +75,7 @@ else{
    booking: _id,
    transaction:paymentIntent.id,
  }
-  fetch(`http://localhost:5000/bookingorder/${_id}`,{
+  fetch(`https://salty-tor-68806.herokuapp.com/bookingorder/${_id}`,{
     method:'PATCH',
     headers: { "Content-Type": "application/json" },
      body:JSON.stringify(payment)
