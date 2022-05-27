@@ -4,7 +4,7 @@ import Adminallorder from './Adminallorder';
 const AdminOrder = () => {
     const [allorder ,setAllorder] = useState([]);
     useEffect(()=>{
-        fetch('hhttps://salty-tor-68806.herokuapp.com/allorders')
+        fetch('https://salty-tor-68806.herokuapp.com/allorders')
         .then(res=>res.json())
         .then(data=>setAllorder(data));
 

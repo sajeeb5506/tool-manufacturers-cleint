@@ -9,7 +9,7 @@ const Adminallorder = ({order,index}) => {
     console.log(id);
 
     
-    const proceed = window.confirm('Are You Sure!');
+    const proceed = window.confirm('Are You Sure Delete this order!');
     if(proceed){
     
     const url = `https://salty-tor-68806.herokuapp.com/allorders/${id}`;
