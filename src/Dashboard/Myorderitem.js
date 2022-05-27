@@ -16,8 +16,11 @@ const Myorderitem = ({order,index}) => {
         .then(res=>res.json())
         .then(data=>{ 
             console.log(data);
+            if(data){
+                window.location.reload(true);
+            }
         })
-         window.location.reload(false);
+        
       }
     }
 
